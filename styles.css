@@ -431,6 +431,26 @@ body.theme-practica {
   border-color: #c4302b;
   color: #fffaf0;
 }
+.lang-switch {
+  position: fixed;
+  right: 14px;
+  bottom: 16px;
+  z-index: 90;
+  text-decoration: none;
+  background: #fff8e8;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: .52rem .8rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 800;
+  box-shadow: var(--shadow);
+  transition: transform .16s ease, opacity .16s ease;
+}
+.lang-switch:hover {
+  transform: translateY(-1px);
+  opacity: .96;
+}
 .footer {
   text-align: center;
   color: var(--ink-soft);
@@ -449,4 +469,5 @@ body.theme-practica {
   .topbar { flex-direction: column; align-items: flex-start; }
   .preview-grid { grid-template-columns: 1fr; }
   .cta-btn { width: 100%; text-align: center; }
+  .lang-switch { right: 10px; bottom: 12px; }
 }
