@@ -143,6 +143,62 @@ body.theme-practica {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: .9rem;
 }
+.preview-strip {
+  margin: .6rem 0 2.4rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+.preview-head h2 {
+  margin: 0 0 .55rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.32rem;
+}
+.preview-head p {
+  margin: 0 0 .95rem;
+  color: var(--ink-soft);
+}
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .85rem;
+}
+.preview-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fef8ea;
+  padding: .65rem;
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+}
+.preview-card img {
+  width: 100%;
+  height: 152px;
+  border-radius: 10px;
+  border: 1px solid #e6d9b7;
+  object-fit: contain;
+  background: #fff;
+}
+.preview-card h3 {
+  margin: .2rem 0 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: .95rem;
+}
+.preview-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: .9rem;
+}
+.preview-card a {
+  margin-top: auto;
+  text-decoration: none;
+  font-weight: 800;
+  color: var(--primary);
+  font-size: .9rem;
+}
 .card {
   background: var(--card);
   border: 1px solid var(--line);
@@ -324,10 +380,12 @@ body.theme-practica {
 @media (max-width: 980px) {
   .hero { grid-template-columns: 1fr; }
   .cards { grid-template-columns: 1fr; }
+  .preview-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .layout { grid-template-columns: 1fr; }
   .toc { position: static; max-height: none; }
 }
 @media (max-width: 680px) {
   .topbar { flex-direction: column; align-items: flex-start; }
+  .preview-grid { grid-template-columns: 1fr; }
   .cta-btn { width: 100%; text-align: center; }
 }
