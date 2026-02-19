@@ -114,14 +114,19 @@ body.theme-practica {
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
   background: var(--card);
-  height: clamp(230px, 34vw, 420px);
+  min-height: clamp(230px, 34vw, 420px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .4rem;
 }
 .hero-figure img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: clamp(230px, 34vw, 420px);
   display: block;
-  object-fit: cover;
-  object-position: center 32%;
+  object-fit: contain;
+  object-position: center center;
 }
 .pill-row {
   margin-top: 1rem;
@@ -295,9 +300,11 @@ body.theme-practica {
   .cards { grid-template-columns: 1fr; }
   .layout { grid-template-columns: 1fr; }
   .toc { position: static; max-height: none; }
-  .hero-figure { height: clamp(220px, 48vw, 360px); }
+  .hero-figure { min-height: clamp(220px, 48vw, 360px); }
+  .hero-figure img { max-height: clamp(220px, 48vw, 360px); }
 }
 @media (max-width: 680px) {
   .topbar { flex-direction: column; align-items: flex-start; }
-  .hero-figure { height: 220px; }
+  .hero-figure { min-height: 220px; }
+  .hero-figure img { max-height: 220px; }
 }
