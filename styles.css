@@ -199,6 +199,61 @@ body.theme-practica {
   color: var(--primary);
   font-size: .9rem;
 }
+.video-strip {
+  margin: .6rem 0 2.6rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+.video-head h2 {
+  margin: 0 0 .55rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.32rem;
+}
+.video-head p {
+  margin: 0 0 1rem;
+  color: var(--ink-soft);
+}
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .95rem;
+}
+.video-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fef8ea;
+  padding: .65rem;
+}
+.video-frame {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid #e6d9b7;
+  background: #fff;
+}
+.video-frame iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.video-card h3 {
+  margin: .58rem 0 .28rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: .98rem;
+}
+.video-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: .9rem;
+}
 .card {
   background: var(--card);
   border: 1px solid var(--line);
@@ -371,6 +426,11 @@ body.theme-practica {
   border-color: var(--accent);
   color: #fffaf0;
 }
+.cta-btn.youtube {
+  background: #c4302b;
+  border-color: #c4302b;
+  color: #fffaf0;
+}
 .footer {
   text-align: center;
   color: var(--ink-soft);
@@ -381,6 +441,7 @@ body.theme-practica {
   .hero { grid-template-columns: 1fr; }
   .cards { grid-template-columns: 1fr; }
   .preview-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .video-grid { grid-template-columns: 1fr; }
   .layout { grid-template-columns: 1fr; }
   .toc { position: static; max-height: none; }
 }
