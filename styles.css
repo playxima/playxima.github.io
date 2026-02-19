@@ -96,9 +96,9 @@ body.theme-practica {
 .hero {
   padding: 2.9rem 0 2rem;
   display: grid;
-  grid-template-columns: 1.15fr .85fr;
-  gap: 1rem;
-  align-items: center;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 1.2rem;
+  align-items: stretch;
 }
 .hero h1 {
   margin: 0;
@@ -114,8 +114,15 @@ body.theme-practica {
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
   background: var(--card);
+  height: clamp(230px, 34vw, 420px);
 }
-.hero-figure img { width: 100%; display: block; }
+.hero-figure img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 32%;
+}
 .pill-row {
   margin-top: 1rem;
   display: flex;
@@ -195,6 +202,8 @@ body.theme-practica {
   border-radius: 16px;
   box-shadow: var(--shadow);
   padding: 1rem 1.2rem;
+  overflow: hidden;
+  overflow-wrap: anywhere;
 }
 .chapter {
   border-bottom: 1px solid #e8dec5;
@@ -229,9 +238,14 @@ body.theme-practica {
   border-radius: 12px;
   background: #fdf7e9;
   padding: .7rem;
+  overflow: hidden;
 }
 .book-figure img {
   width: 100%;
+  display: block;
+  max-height: 560px;
+  object-fit: contain;
+  background: #fff;
   border-radius: 8px;
   border: 1px solid #e6d9b7;
   margin-bottom: .55rem;
@@ -254,6 +268,7 @@ body.theme-practica {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: .9rem;
   white-space: pre-wrap;
+  overflow-x: auto;
 }
 .page-links {
   display: flex;
@@ -280,7 +295,9 @@ body.theme-practica {
   .cards { grid-template-columns: 1fr; }
   .layout { grid-template-columns: 1fr; }
   .toc { position: static; max-height: none; }
+  .hero-figure { height: clamp(220px, 48vw, 360px); }
 }
 @media (max-width: 680px) {
   .topbar { flex-direction: column; align-items: flex-start; }
+  .hero-figure { height: 220px; }
 }
